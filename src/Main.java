@@ -1,11 +1,15 @@
 public class Main {
-
     public static void main(String[] args) {
-        Boss boss = new Boss();
-        boss.setHealth(700);
-        boss.setHit(50);
-        boss.setProtection("Fire");
-        System.out.println(boss.getHealth() + " " + boss.getHit() + " " + boss.getProtection());
+        Warrior warrior = new Warrior();
+        Magic magic = new Magic();
+        Medic medic = new Medic();
 
+
+        Hero[] heroes = {warrior, magic, medic};
+        for (int i = 0; i < heroes.length; i++) {
+            heroes[i].applySuperAbility("CRITICAL DAMAGE");
+            System.out.println(heroes[i].applySuperAbility("CRITICAL DAMAGE"));
+        }
     }
 }
+
